@@ -41,8 +41,8 @@ router.post('/merge', upload.array('files'), async (req, res) => {
         res.on('finish', () => {
             console.log('PDF files merged successfully');
             // Delete all the files from the server
-            clearDirectory('./public/results');
-            clearDirectory('./public/uploads');
+            // clearDirectory('./public/results');
+            // clearDirectory('./public/uploads');
         });
 
         return res.status(200); // No need to send any additional data in the response body
@@ -52,7 +52,7 @@ router.post('/merge', upload.array('files'), async (req, res) => {
         clearDirectory('./public/uploads');
 
         console.error('Error uploading files:', error);
-        return res.status(500).send('Internal server error');
+        return res.status(500).send('Internal server error from app.');
     }
 });
 
