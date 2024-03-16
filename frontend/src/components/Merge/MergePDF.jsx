@@ -5,7 +5,8 @@ export default function MergePDF() {
     const [selectedFiles, setSelectedFiles] = useState([]);
     const [downloadLink, setDownloadLink] = useState(null);
 
-    const host = 'http://localhost:5000/api/conversion/merge';
+    const host = 'https://demo-ilovepdf.onrender.com/api/conversion/merge';
+
 
     const handleFileChange = (event) => {
         setSelectedFiles(event.target.files);
