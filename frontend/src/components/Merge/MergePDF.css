@@ -1,0 +1,44 @@
+.merge-pdf-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    width: 30vw;
+    margin-top: 40px;
+}
+
+.merge-pdf-card input[type="file"] {
+    margin-bottom: 8px;
+}
+
+.merge-pdf-card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.merge-pdf-card button:hover {
+    background-color: #0056b3;
+}
+
+.merge-pdf-card button:disabled {
+    background-color: #78b5f6;
+}
+
+.download-button {
+    margin-top: 16px;
+}
+
+.merge-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.merge-text>h1 {
+    text-align: justify;
+}
