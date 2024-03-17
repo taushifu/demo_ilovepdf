@@ -5,8 +5,8 @@ export default function MergePDF() {
     const [selectedFiles, setSelectedFiles] = useState([]);
     const [downloadLink, setDownloadLink] = useState(null);
 
-    // const host = 'http://localhost:5000/api/conversion/merge';
-    const host = 'https://demo-ilovepdf.onrender.com/api/conversion/merge';
+    const localServerUrl = 'http://localhost:5000';
+    const serverUrl = import.meta.env.VITE_SERVER_URL || localServerUrl;
 
 
     const handleFileChange = (event) => {
@@ -17,7 +17,7 @@ export default function MergePDF() {
     const downloadMergedPDF = async (formData) => {
         try {
             // Make a POST request to the server to merge and download the files
-            const response = await fetch(host,
+            const response = await fetch(`${serverUrl}/api/conversion/merge`,
                 {
                     method: 'POST',
                     body: formData, // Assuming formData is already defined with the files to upload
